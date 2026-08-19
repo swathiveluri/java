@@ -1,25 +1,17 @@
 import java.util.Scanner;
 
-public class PositiveNegative
+public class PrintNumbers
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number: ");
-        int num = sc.nextInt();
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
 
-        if (num > 0)
+        for (int i = 1; i <= n; i++)
         {
-            System.out.println("Positive number");
-        }
-        else if (num < 0)
-        {
-            System.out.println("Negative number");
-        }
-        else
-        {
-            System.out.println("Zero");
+            System.out.print(i + " ");
         }
 
         sc.close();

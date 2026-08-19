@@ -1,49 +1,22 @@
 import java.util.Scanner;
 
-public class RestaurantMenu
+public class StarPattern
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("----- RESTAURANT MENU -----");
-        System.out.println("1. Idly  - ₹30");
-        System.out.println("2. Dosa  - ₹50");
-        System.out.println("3. Poori - ₹40");
-        System.out.println("4. Meals - ₹100");
-        System.out.println("5. Exit");
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
 
-        System.out.print("Enter your choice: ");
-        int choice = sc.nextInt();
-
-        switch (choice)
+        for (int i = 1; i <= rows; i++)
         {
-            case 1:
-                System.out.println("You selected Idly");
-                System.out.println("Price: ₹30");
-                break;
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
 
-            case 2:
-                System.out.println("You selected Dosa");
-                System.out.println("Price: ₹50");
-                break;
-
-            case 3:
-                System.out.println("You selected Poori");
-                System.out.println("Price: ₹40");
-                break;
-
-            case 4:
-                System.out.println("You selected Meals");
-                System.out.println("Price: ₹100");
-                break;
-
-            case 5:
-                System.out.println("Thank you!");
-                break;
-
-            default:
-                System.out.println("Invalid choice");
+            System.out.println();
         }
 
         sc.close();

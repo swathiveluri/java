@@ -1,58 +1,22 @@
 import java.util.Scanner;
 
-public class Calculator
+public class MultiplicationTables
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        double a = sc.nextDouble();
+        System.out.print("Enter number of tables: ");
+        int n = sc.nextInt();
 
-        System.out.print("Enter second number: ");
-        double b = sc.nextDouble();
-
-        System.out.print("Enter operator (+, -, *, /, %): ");
-        char operator = sc.next().charAt(0);
-
-        switch (operator)
+        for (int i = 1; i <= n; i++)
         {
-            case '+':
-                System.out.println("Result = " + (a + b));
-                break;
+            System.out.println("\nTable of " + i);
 
-            case '-':
-                System.out.println("Result = " + (a - b));
-                break;
-
-            case '*':
-                System.out.println("Result = " + (a * b));
-                break;
-
-            case '/':
-                if (b != 0)
-                {
-                    System.out.println("Result = " + (a / b));
-                }
-                else
-                {
-                    System.out.println("Cannot divide by zero");
-                }
-                break;
-
-            case '%':
-                if (b != 0)
-                {
-                    System.out.println("Result = " + (a % b));
-                }
-                else
-                {
-                    System.out.println("Cannot divide by zero");
-                }
-                break;
-
-            default:
-                System.out.println("Invalid operator");
+            for (int j = 1; j <= 10; j++)
+            {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
         }
 
         sc.close();

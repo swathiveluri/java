@@ -1,21 +1,22 @@
 import java.util.Scanner;
 
-public class EvenOdd
+public class EvenNumbers
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number: ");
-        int num = sc.nextInt();
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
 
-        if (num % 2 == 0)
+        for (int i = 1; i <= n; i++)
         {
-            System.out.println("Even number");
-        }
-        else
-        {
-            System.out.println("Odd number");
+            if (i % 2 != 0)
+            {
+                continue;
+            }
+
+            System.out.print(i + " ");
         }
 
         sc.close();

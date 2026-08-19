@@ -1,30 +1,29 @@
 import java.util.Scanner;
 
-public class ElectricityBill
+public class BreakExample
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter units: ");
-        int units = sc.nextInt();
-
-        double bill;
-
-        if (units <= 100)
+        while (true)
         {
-            bill = units * 2;
-        }
-        else if (units <= 200)
-        {
-            bill = (100 * 2) + ((units - 100) * 3);
-        }
-        else
-        {
-            bill = (100 * 2) + (100 * 3) + ((units - 200) * 5);
-        }
+            System.out.print("Enter number: ");
+            int num = sc.nextInt();
 
-        System.out.println("Electricity Bill: ₹" + bill);
+            if (num < 0)
+            {
+                System.out.println("Program stopped");
+                break;
+            }
+
+            if (num == 0)
+            {
+                continue;
+            }
+
+            System.out.println("Number = " + num);
+        }
 
         sc.close();
     }

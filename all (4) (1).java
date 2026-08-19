@@ -1,29 +1,24 @@
 import java.util.Scanner;
 
-public class LargestTwo
+public class SumNumbers
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a: ");
-        int a = sc.nextInt();
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
 
-        System.out.print("Enter b: ");
-        int b = sc.nextInt();
+        int i = 1;
+        int sum = 0;
 
-        if (a > b)
+        while (i <= n)
         {
-            System.out.println(a + " is largest");
+            sum = sum + i;
+            i++;
         }
-        else if (b > a)
-        {
-            System.out.println(b + " is largest");
-        }
-        else
-        {
-            System.out.println("Both numbers are equal");
-        }
+
+        System.out.println("Sum = " + sum);
 
         sc.close();
     }

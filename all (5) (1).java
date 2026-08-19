@@ -1,42 +1,26 @@
 import java.util.Scanner;
 
-public class LargestThree
+public class ReverseNumber
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a: ");
-        int a = sc.nextInt();
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
 
-        System.out.print("Enter b: ");
-        int b = sc.nextInt();
+        int reverse = 0;
 
-        System.out.print("Enter c: ");
-        int c = sc.nextInt();
-
-        if (a > b)
+        while (num != 0)
         {
-            if (a > c)
-            {
-                System.out.println(a + " is largest");
-            }
-            else
-            {
-                System.out.println(c + " is largest");
-            }
+            int digit = num % 10;
+
+            reverse = reverse * 10 + digit;
+
+            num = num / 10;
         }
-        else
-        {
-            if (b > c)
-            {
-                System.out.println(b + " is largest");
-            }
-            else
-            {
-                System.out.println(c + " is largest");
-            }
-        }
+
+        System.out.println("Reverse = " + reverse);
 
         sc.close();
     }

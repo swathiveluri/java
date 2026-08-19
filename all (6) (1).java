@@ -1,38 +1,30 @@
 import java.util.Scanner;
 
-public class StudentGrade
+public class CountDigits
 {
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter mark: ");
-        int mark = sc.nextInt();
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
 
-        if (mark < 0 || mark > 100)
+        int count = 0;
+
+        if (num == 0)
         {
-            System.out.println("Invalid mark");
-        }
-        else if (mark >= 90)
-        {
-            System.out.println("Grade: A");
-        }
-        else if (mark >= 80)
-        {
-            System.out.println("Grade: B");
-        }
-        else if (mark >= 70)
-        {
-            System.out.println("Grade: C");
-        }
-        else if (mark >= 60)
-        {
-            System.out.println("Grade: D");
+            count = 1;
         }
         else
         {
-            System.out.println("Grade: F");
+            while (num != 0)
+            {
+                num = num / 10;
+                count++;
+            }
         }
+
+        System.out.println("Number of digits = " + count);
 
         sc.close();
     }
